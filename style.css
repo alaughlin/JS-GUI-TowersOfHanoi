@@ -1,0 +1,95 @@
+html, body, ul, li, label {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin: 50px, auto;
+  text-align: center;
+}
+
+h2 {
+  margin: 30px, auto;
+  text-align: center;
+}
+
+.won_label {
+  display: none;
+}
+
+.won {
+  display: block;
+}
+
+.group {
+  margin: auto;
+  display: block;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+}
+
+input {
+  width: 30px;
+}
+
+label.button {
+  border: 3px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+
+label.button:hover {
+  background: yellow;
+}
+
+ul.towers {
+  display: block;
+  margin: auto;
+  height: 200px;
+  width: 600px;
+}
+
+div.tower_box {
+  float: left;
+  height: 200px;
+  width: 200px;
+  position: relative;
+}
+
+ul.tower {
+  float: left;
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+}
+
+.piece:hover, .pole:hover {
+  background: #9090F0;
+}
+
+div.pole {
+  content: "";
+  float: left;
+  border: 5px solid black;
+  height: 190;
+  width: 10;
+  margin: 0px 90px 0px 90px;
+  position: absolute;
+  background: white;
+}
+
+li.piece {
+  content: "";
+  display:block;
+  border: 5px solid black;
+  height: 10px;
+  background: #505090;
+  margin: auto;
+
+}
+
+li.selected_piece {
+  background: yellow;
+}

@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <script src="jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="hanoiGame.js" type="text/javascript" charset="utf-8"></script>
+    <script src="towerUI.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <script>
+      $(document).ready(function() {
+        var view = new Hanoi.TowerUI(new Hanoi.Game(4));
+
+        $(".tower_box").on("click", ".pole, .tower", view.onClick.bind(view));
+        $("#reset").bind("click", function() {
+          var count = parseInt($("#diskCount").prop("value"));
+          count = count || 3;
+          console.log(count);
+          view.reset(new Hanoi.Game(count));
+        });
+      });
+    </script>
+    <h1>Towers of Hanoi</h1>
+    <div class="group">
+      <label>
+        #Disks:
+        <input id="diskCount" type="text"></input>
+      </label>
+      <label id="reset" class="button">Reset</label>
+    </div>
+    <ul class="towers">
+      <div class="tower_box">
+        <div class="pole" id="pole1"></div>
+        <ul class="tower" id="tower1"></ul>
+      </div>
+
+      <div class="tower_box">
+        <div class="pole" id="pole2"></div>
+        <ul class="tower" id="tower2"></ul>
+      </div>
+      <div class="tower_box">
+        <div class="pole" id="pole3"></div>
+        <ul class="tower" id="tower3"></ul>
+      </div>
+    </ul>
+
+    <h2 class="won_label">You Won!</h2>
+
+  </body>
+</html>
